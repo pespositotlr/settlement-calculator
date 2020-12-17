@@ -1,0 +1,7 @@
+<h1 id="tableLabel">Settlements</h1>
+
+<form [formGroup]="settlementFormGroup" (ngSubmit)="onSubmit()">
+  <p>Settlement amount in $USD.</p>
+  <input name="settlementAmount" formControlName="settlementAmount" maxlength="15" appNumbersOnly>
+  <button class="button" type="submit">Submit</button>
+</form>

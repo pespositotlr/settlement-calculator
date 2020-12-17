@@ -1,0 +1,22 @@
+<div *ngIf="paymentPlan; else elseBlock">
+  <p>Thank you!</p>
+  <p>Here's your settlement detail.</p>
+
+  <table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>Due Date</th>
+        <th>Amount Due</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let installment of paymentPlan.installments">
+        <td>{{ installment.dueDate | date : 'mediumDate'}}</td>
+        <td>{{ installment.amount | currency:'USD':'symbol':'1.2-2'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #elseBlock>
+  <p>No plan submitted</p>
+</ng-template>
