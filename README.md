@@ -12,7 +12,7 @@ It's meant to have thorough unit tests on the back end and use clean-coding and 
 
 The front-end had requirements to have navigation, an input form with validation, and a separate URI for the user to be sent to when they submit their payment amount.
 
-###For example:
+### For example:
 
 - The number of installments is set to 4.
 - The payment interval is set to 2 weeks.
